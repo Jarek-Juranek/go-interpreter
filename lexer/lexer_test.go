@@ -7,6 +7,7 @@ import (
 
 func TestNextToken(t *testing.T) {
 	input := `let five = 5;
+
 	let ten = 10;
 
 let add = fn(x, y) {
@@ -65,7 +66,7 @@ let result = add(five, ten);
 		token := l.NextToken()
 
 		if token.Type != tt.expectedType {
-			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q", i, tt.expectedType, token.Type)
+			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q (%q)", i, tt.expectedType, token.Type, token.Literal)
 		}
 	}
 }
