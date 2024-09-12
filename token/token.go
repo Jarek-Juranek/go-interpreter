@@ -7,8 +7,8 @@ type Token struct {
 	Literal string
 }
 
-var keywoards = map[string]TokenType {
-	"fn": FUNCTION,
+var keywoards = map[string]TokenType{
+	"fn":  FUNCTION,
 	"let": LET,
 }
 
@@ -31,8 +31,14 @@ const (
 	INT   = "INT"
 
 	// OPERATORS
-	ASSIGN = "="
-	ADD    = "+"
+	ASSIGN   = "="
+	ADD      = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
 
 	// DELIMITERS, CODE STRUCTURE
 	COMMA     = ","
